@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | LakzyRox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="admin">
+  <main class="admin-shell">
+    <section class="admin-card" data-auth-view="login">
+      <a class="brand" href="/"><span class="brand-mark">L</span><span>LAKZYROX</span></a>
+      <p class="eyebrow">Secure control room</p><h1>Welcome back.</h1><p class="muted">Sign in with your Supabase admin account to access the studio controls.</p>
+      <form class="auth-form" id="login-form"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required><button class="button button-primary" type="submit">Enter dashboard <span aria-hidden="true">&#8594;</span></button><p class="form-message" role="status"></p></form>
+      <a class="back-link" href="/">&#8592; Return to site</a>
+    </section>
+    <section class="admin-workspace is-hidden" data-auth-view="app">
+      <header class="admin-topbar"><a class="brand" href="/"><span class="brand-mark">L</span><span>LAKZYROX / ADMIN</span></a><button class="button button-small button-outline" id="logout-button" type="button">Log out</button></header>
+      <div class="admin-layout"><aside class="admin-sidebar"><p class="eyebrow">Workspace</p><nav class="admin-nav" aria-label="Admin navigation"><button class="is-active" type="button">Dashboard</button><button type="button">Theme</button><button type="button">Content</button><button type="button">Layout</button><button type="button">Code</button><button type="button">Preview</button><button type="button">Publish</button><button type="button">Versions</button><button type="button">Settings</button></nav></aside><section class="admin-content"><p class="eyebrow">System overview</p><h1>Control room.</h1><div class="dashboard-grid"><article class="dashboard-panel"><span class="panel-kicker">Connection</span><h2 data-connection-status>Supabase pending</h2><p>Configure the public project values before enabling content controls.</p></article><article class="dashboard-panel"><span class="panel-kicker">Next phase</span><h2>Theme editor</h2><p>The modular data, theme, and layout boundaries are ready for the editor phase.</p></article></div><p class="form-message" data-dashboard-message></p></section></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
